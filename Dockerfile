@@ -10,7 +10,7 @@ RUN pip config set global.index-url \
     https://pypi.tuna.tsinghua.edu.cn/simple
 
 # Install Tensorflow
-RUN pip install --quiet --no-cache-dir \
-    'tensorflow-gpu==2.4.1' && \
+RUN pip install --no-cache-dir \
+    'tensorflow-gpu' && \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
