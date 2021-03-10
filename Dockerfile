@@ -6,6 +6,9 @@ LABEL maintainer="HofmannHe"
 WORKDIR /root
 COPY files/.condarc .
 
+RUN pip config set global.index-url \
+    https://pypi.tuna.tsinghua.edu.cn/simple
+
 # Install Tensorflow
 RUN pip install --quiet --no-cache-dir \
     'tensorflow-gpu' && \
