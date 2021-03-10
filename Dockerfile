@@ -1,7 +1,7 @@
 ARG BASE_CONTAINER=jupyter/tensorflow-notebook
 FROM $BASE_CONTAINER
 
-LABEL maintainer="Jupyter Project <jupyter@googlegroups.com>"
+LABEL maintainer="HofmannHe"
 
 # Install Tensorflow
 RUN pip install --quiet --no-cache-dir \
