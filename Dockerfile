@@ -11,6 +11,6 @@ RUN pip config set global.index-url \
 
 # Install Tensorflow
 RUN pip install --quiet --no-cache-dir \
-    'tensorflow-gpu' && \
+    'tensorflow-gpu==2.4.1' && \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
