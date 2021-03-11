@@ -3,7 +3,7 @@ FROM $BASE_CONTAINER
 
 LABEL maintainer="HofmannHe"
 
-WORKDIR /root
+WORKDIR "/home/${NB_USER}"
 COPY files/.condarc .
 
 # RUN pip config set global.index-url \
