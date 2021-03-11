@@ -7,5 +7,6 @@ Container for deep-learning
 
 ### pip
 - tensorflow-gpu
+- pytorch
 
 ### conda
