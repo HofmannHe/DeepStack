@@ -7,8 +7,8 @@ USER "${NB_USER}"
 WORKDIR "/home/${NB_USER}"
 
 RUN pip install --no-cache-dir --upgrade pip && \
-    conda install -y tensorflow-gpu && \
-    conda install -y pytorch && \
+    conda install -y -c anaconda tensorflow-gpu && \
+    conda install -y -c pytorch pytorch && \
 #     pip install --no-cache-dir tensorflow-gpu==2.4.1 && \
 #     pip install --no-cache-dir torch==1.7.1 && \
 
