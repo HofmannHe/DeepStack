@@ -13,7 +13,7 @@ RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir torch==1.7.1
 
 ### for chinese users ###
-ADD --chown=${NB_USER}:${NB_GID} files/.condarc .
+ADD --chown="${NB_USER}":"${NB_GID}" files/.condarc .
 
 RUN pip config set global.index-url \
     https://pypi.tuna.tsinghua.edu.cn/simple
