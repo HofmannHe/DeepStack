@@ -3,14 +3,15 @@ FROM $BASE_CONTAINER
 
 LABEL maintainer="HofmannHe"
 
-WORKDIR /root
-COPY files/.condarc .
+USER "${NB_USER}"
+WORKDIR "/home/${NB_USER}"
+COPY --chown=${NB_USER}:users files/.condarc .
 
-# RUN pip config set global.index-url \
-#     https://pypi.tuna.tsinghua.edu.cn/simple
+RUN pip config set global.index-url \
+    https://pypi.tuna.tsinghua.edu.cn/simple
 
 # Install Tensorflow
-RUN pip install --quiet --no-cache-dir \
+RUN pip install --no-cache-dir \
     'tensorflow-gpu' && \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
