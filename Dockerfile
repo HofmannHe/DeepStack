@@ -1,4 +1,4 @@
-ARG BASE_CONTAINER=jupyter/tensorflow-notebook
+ARG BASE_CONTAINER=jupyter/tensorflow-notebook:d990a62010ae
 FROM $BASE_CONTAINER
 
 LABEL maintainer="HofmannHe"
