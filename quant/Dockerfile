@@ -12,7 +12,7 @@ USER root
 WORKDIR "/home/${NB_USER}"
 
 RUN pip install --no-cache-dir tushare && \
-    pip install --no-cache-dir backtrader[plotting] &&
+    pip install --no-cache-dir backtrader[plotting] && \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
 
