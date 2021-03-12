@@ -1,4 +1,4 @@
-# DL-container
+# DL-containers
 Container for deep-learning
 
 ## Based on jupyter/tensorflow-notebook
