@@ -1,12 +1,29 @@
 # DL-containers
-Container for deep-learning
 
-## Based on jupyter/tensorflow-notebook
+Containers for deep-learning.
 
-## Addition packages
+## base
 
-### pip
+Based on jupyter/tensorflow-notebook
+
+### Addition packages
+
+#### pip
+
 - tensorflow-gpu
 - pytorch
 
-### conda
+#### conda
+
+## quant
+
+Addition packages for quanteres.
+
+### Addition packages
+
+#### pip
+
+- tensorflow-gpu
+- pytorch
+
+#### conda
