@@ -16,7 +16,9 @@ ADD files/.condarc .
 ### for chinese users ###
 
 RUN pip install --no-cache-dir --upgrade pip && \
-    conda install --quiet --yes -c anaconda cudatoolkit && \
+   conda install --quiet --yes -c nvidia cudatoolkit && \
+   conda install --quiet --yes -c nvidia cudnn && \
+#    conda install --quiet --yes -c anaconda cudatoolkit && \
 #    conda install --quiet --yes -c pytorch pytorch && \
     conda clean --all -f -y && \
     pip install --no-cache-dir tensorflow-gpu==2.4.1 && \
