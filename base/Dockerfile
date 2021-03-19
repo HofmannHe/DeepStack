@@ -11,22 +11,22 @@ USER root
 
 WORKDIR "/home/${NB_USER}"
 
-### for chinese users ###
-ADD files/.condarc .
-### for chinese users ###
-
 RUN pip install --no-cache-dir --upgrade pip && \
    conda install --quiet --yes -c nvidia cudatoolkit && \
    conda install --quiet --yes -c nvidia cudnn && \
-#    conda install --quiet --yes -c anaconda cudatoolkit && \
-#    conda install --quiet --yes -c pytorch pytorch && \
+   conda install --quiet --yes -c anaconda tensorflow-gpu=2.4 && \
+   conda install --quiet --yes -c pytorch pytorch=1.8 && \
     conda clean --all -f -y && \
-    pip install --no-cache-dir tensorflow-gpu==2.4.1 && \
-    pip install --no-cache-dir torch==1.7.1 && \
+#    pip install --no-cache-dir tensorflow-gpu==2.4.1 && \
+#    pip install --no-cache-dir torch==1.7.1 && \
 ### for chinese users ###
     pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple && \
 ### for chinese users ###
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
+
+### for chinese users ###
+ADD files/.condarc .
+### for chinese users ###
 
 USER $NB_UID
