@@ -14,8 +14,8 @@ WORKDIR "/home/${NB_USER}"
 RUN pip install --no-cache-dir --upgrade pip && \
    conda install --quiet --yes -c nvidia cudatoolkit && \
    conda install --quiet --yes -c nvidia cudnn && \
-   conda install --quiet --yes -c anaconda tensorflow-gpu=2.4 && \
-   conda install --quiet --yes -c pytorch pytorch=1.8 && \
+   conda install --quiet --yes -c anaconda tensorflow-gpu=2.4.1 && \
+   conda install --quiet --yes -c pytorch pytorch=1.8.0 && \
     conda clean --all -f -y && \
 #    pip install --no-cache-dir tensorflow-gpu==2.4.1 && \
 #    pip install --no-cache-dir torch==1.7.1 && \
