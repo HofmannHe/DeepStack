@@ -1,4 +1,4 @@
-ARG BASE_CONTAINER=jupyter/tensorflow-notebook
+ARG BASE_CONTAINER=cschranz/gpu-jupyter:v1.4_cuda-11.0_ubuntu-18.04_python-only
 FROM $BASE_CONTAINER
 
 LABEL maintainer="HofmannHe"
@@ -12,10 +12,6 @@ USER root
 WORKDIR "/home/${NB_USER}"
 
 RUN pip install --no-cache-dir --upgrade pip && \
-   conda install --quiet --yes -c nvidia cudatoolkit && \
-   conda install --quiet --yes -c nvidia cudnn && \
-   conda install --quiet --yes -c anaconda tensorflow-gpu=2.4.1 && \
-   conda install --quiet --yes -c pytorch pytorch=1.8.0 && \
     conda clean --all -f -y && \
 #    pip install --no-cache-dir tensorflow-gpu==2.4.1 && \
 #    pip install --no-cache-dir torch==1.7.1 && \

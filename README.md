@@ -4,7 +4,7 @@ Containers for deep-learning.
 
 ## base
 
-Based on jupyter/tensorflow-notebook
+Based on docker pull cschranz/gpu-jupyter
 
 ### Addition packages
 
