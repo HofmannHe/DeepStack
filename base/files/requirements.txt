@@ -3,7 +3,6 @@ dtale #==1.43.0
 python-language-server[all]
 
 # jupyter-lab plugins
-jupyterlab-drawio
 lckr-jupyterlab-variableinspector
 jupyterlab-lsp
 jupyter-kite

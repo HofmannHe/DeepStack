@@ -16,7 +16,7 @@ ADD files/requirements.txt .
 
 RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt && \
-    jupyter labextension install nbgather && \
+#    jupyter labextension install nbgather && \
     jupyter labextension install jupyterlab-spreadsheet && \
     jupyter labextension install jupyterlab-dash && \
     jupyter labextension install jupyterlab-execute-time && \
