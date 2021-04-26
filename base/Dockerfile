@@ -19,7 +19,7 @@ RUN pip install --no-cache-dir --upgrade pip && \
 #    jupyter labextension install nbgather && \
     jupyter labextension install jupyterlab-spreadsheet && \
     jupyter labextension install jupyterlab-dash && \
-    jupyter labextension install jupyterlab-execute-time && \
+#    jupyter labextension install jupyterlab-execute-time && \
     jupyter labextension install jupyterlab-spreadsheet && \
     jupyter labextension install @kiteco/jupyterlab-kite && \
     jupyter lab clean && \
@@ -32,8 +32,8 @@ RUN pip install --no-cache-dir --upgrade pip && \
     fix-permissions "/home/${NB_USER}"
 
 
+USER $NB_UID
+
 ### for chinese users ###
 ADD files/.condarc .
 ### for chinese users ###
-
-USER $NB_UID
