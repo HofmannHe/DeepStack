@@ -3,8 +3,8 @@ FROM $BASE_CONTAINER
 
 LABEL maintainer="HofmannHe"
 
-#USER root
-USER $NB_UID
+USER root
+#USER $NB_UID
 
 # RUN apt-get update && \
 #     apt-get install -y --no-install-recommends ffmpeg dvipng cm-super && \
