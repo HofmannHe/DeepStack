@@ -3,22 +3,23 @@ FROM $BASE_CONTAINER
 
 LABEL maintainer="HofmannHe"
 
-USER root
-
+# USER root
 # RUN apt-get update && \
 #     apt-get install -y --no-install-recommends ffmpeg dvipng cm-super && \
 #     apt-get clean && rm -rf /var/lib/apt/lists/*
 
-WORKDIR "/home/${NB_USER}"
-
 USER $NB_UID
+
+WORKDIR "/home/${NB_USER}"
 
 ADD files/requirements.txt .
 
 RUN pip install --no-cache-dir --upgrade pip && \
-    pip install --no-cache-dir -r requirements.txt && \
+    pip install --no-cache-dir -r requirements.txt
+
+USER root
+RUN jupyter labextension install jupyterlab-spreadsheet && \
 #    jupyter labextension install nbgather && \
-    jupyter labextension install jupyterlab-spreadsheet && \
     jupyter labextension install jupyterlab-dash && \
 #    jupyter labextension install jupyterlab-execute-time && \
     jupyter labextension install jupyterlab-spreadsheet && \
@@ -28,6 +29,8 @@ RUN pip install --no-cache-dir --upgrade pip && \
     rm -rf /home/$NB_USER/.cache/yarn && \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
+
+USER $NB_UID
 
 ### for chinese users ###
 RUN pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
