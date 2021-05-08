@@ -12,6 +12,7 @@ Based on cschranz/gpu-jupyter
 
 - tensorflow-gpu
 - pytorch
+- mlflow
 
 #### conda
 
@@ -23,7 +24,6 @@ Addition packages for quanteres.
 
 #### pip
 
-- tensorflow-gpu
 - pytorch
 
 #### conda
