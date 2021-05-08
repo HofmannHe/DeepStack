@@ -4,7 +4,7 @@ Containers for deep-learning.
 
 ## base
 
-Based on docker pull cschranz/gpu-jupyter
+Based on cschranz/gpu-jupyter
 
 ### Addition packages
 

@@ -1,6 +1,7 @@
 versioned-hdf5 #==1.2.6
 dtale #==1.43.0
 python-language-server[all]
+mlflow
 
 # jupyter-lab plugins
 lckr-jupyterlab-variableinspector
