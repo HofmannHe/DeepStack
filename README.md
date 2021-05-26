@@ -1,29 +1,43 @@
-# DL-containers
+[TOC]
 
-Containers for deep-learning.
+# DeepQuant
 
-## base
+Deep learning stacks
 
-Based on cschranz/gpu-jupyter
+## Components
 
-### Addition packages
+### Service
 
-#### pip
+#### Version Control Management Tools
+
+- gitlab-ce
+
+#### Development Tools
+
+##### jupyter-gpu
+
+###### base
+
+Based on [cschranz/gpu-jupyter](https://hub.docker.com/r/cschranz/gpu-jupyter)
+
+#### Addition packages
+
+##### pip
 
 - tensorflow-gpu
 - pytorch
 
-#### conda
+##### conda
 
-## quant
+### quant
 
 Addition packages for quanteres.
 
-### Addition packages
+#### Addition packages
 
-#### pip
+##### pip
 
 - tensorflow-gpu
 - pytorch
 
-#### conda
+##### conda
