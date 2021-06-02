@@ -1,8 +1,7 @@
-[TOC]
-
 # DeepQuant
 
 Deep learning stacks
+[TOC]
 
 ## Components
 
@@ -10,7 +9,7 @@ Deep learning stacks
 
 #### Version Control Management Tools
 
-- gitlab-ce
+##### gitlab-ce
 
 #### Development Tools
 
@@ -20,24 +19,22 @@ Deep learning stacks
 
 Based on [cschranz/gpu-jupyter](https://hub.docker.com/r/cschranz/gpu-jupyter)
 
-#### Addition packages
+Addition Packages
 
-##### pip
+- pip
 
-- tensorflow-gpu
-- pytorch
+  - tensorflow-gpu
+  - pytorch
 
-##### conda
+- conda
 
-### quant
+###### quant
 
-Addition packages for quanteres.
+Addition Packages For Quantitative Finance.
 
-#### Addition packages
+Addition packages
 
-##### pip
-
-- tensorflow-gpu
-- pytorch
-
-##### conda
+- pip
+  - tensorflow-gpu
+  - pytorch
+- conda
